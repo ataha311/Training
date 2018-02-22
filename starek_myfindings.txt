@@ -1,0 +1,1 @@
+Git fetch + Git Rebase would be a much better option than using pull & fetch. Either way the content of the work tree will be saved, but using fetch and rebase will save the tree in a linear way and it would be much more traceable   
