@@ -1,0 +1,1 @@
+upon our research, git fetch then rebase is the safest combination for clean commiting or pushing history.
