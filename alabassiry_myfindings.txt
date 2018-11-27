@@ -1,0 +1,23 @@
+Let's say you want to edit a file on the branch, so you pull at (H) and start editing and/or adding new files:
+--------------------------------------------------------------------------------------------------------------
+
+- o - o - o - H - A - B - C (master)
+               \
+                P - Q - R (origin/master)
+
+If you merge at this point (the default behavior of git pull), assuming there aren't any conflicts, you end up with this [BRANCHING]:
+-------------------------------------------------------------------------------------------------------------------------
+
+- o - o - o - H - A - B - C - X (master)
+               \             /
+                P - Q - R --- (origin/master)
+
+If on the other hand you did the appropriate rebase, you'd end up with this [LINEAR]:
+----------------------------------------------------------------------------
+
+- o - o - o - H - P - Q - R - A' - B' - C' (master)
+                          |
+                          (origin/master)
+
+
+Conclusion: The rebase rewrites your history, making it look as if you had committed on top of origin's new master branch (R), instead of where you originally committed (H). You should never use the rebase approach if someone else has already pulled from your master branch.
