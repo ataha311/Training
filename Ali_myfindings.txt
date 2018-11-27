@@ -1,0 +1,13 @@
+Using either git pull or git fetch + git rebase will both result into having the same content added to your worktree but there are the 
+following points to be noted:
+
+--Advantage of fetch + rebase is that It will preserve a linear looking commits history instead of having multiple branch bubbles 
+look in case of using pull
+
+--On the other hand its not recommended to use rebase on remote branches as changing other people's commits history is considered
+to be bad practice
+ 
+
+
+
+Also, note that "git pull --rebase" can also be used as an equivalent to fetch + rebase 
